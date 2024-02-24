@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MobileStoreWebApp.Models;
 
 namespace MobileStoreWebApp.Services
 {
@@ -7,5 +8,6 @@ namespace MobileStoreWebApp.Services
         public ProductDbContext(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<Product> Products { get; set; }
     }
 }
